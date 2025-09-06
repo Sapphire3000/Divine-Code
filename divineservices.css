@@ -1,20 +1,20 @@
+/* BODY */
 body {
   margin: 0;
   padding: 0;
-  /* Background stripes angled */
   background: repeating-linear-gradient(
     45deg,
-    #000000,          /* black stripe */
+    #000000,
     #000000 60px,
-    #FFFFFF 60px,     /* white stripe */
+    #FFFFFF 60px,
     #FFFFFF 120px,
-    #D4AF37 120px,    /* gold accent stripe */
+    #D4AF37 120px,
     #D4AF37 130px
   );
   font-family: Arial, sans-serif;
 }
 
-/* Image */
+/* IMAGE */
 .wand-image {
   height: 200px;
   width: 200px;
@@ -23,32 +23,36 @@ body {
   border-radius: 10px;
 }
 
-/* Container for title + description */
-.package-content {
-  background-color: rgba(255, 255, 255, 0.9); /* white with a little transparency */
+/* PACKAGE BOX (Unified for Explorer & Maintenance) */
+.package-box {
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
   color: black;
   border-radius: 10px;
   padding: 20px;
-  max-width: 600px;
-  margin: 20px auto; /* centers the box */
+  max-width: 600px;       /* controls width of box */
+  margin: 20px auto;      /* centers box horizontally */
   text-align: left;
 }
 
-/* Title inside container */
-.package-content h2 {
+/* TITLE INSIDE PACKAGE */
+.package-box h2 {
   margin-top: 0;
   text-align: center;
   font-size: 1.8rem;
-  color: #000000; /* stays readable */
+  color: #000000;
+  padding-top: 20px;
 }
 
-/* Description */
-.service-description {
+/* SERVICE DESCRIPTION / PACKAGE DETAILS */
+.service-description,
+.mp {
   font-size: 1rem;
   line-height: 1.5;
+  padding-left: 20px;
+  padding-bottom: 35px;
 }
 
-/* Button */
+/* BUTTONS */
 button {
   background-color: green;
   color: white;
@@ -59,29 +63,11 @@ button {
   margin: 20px auto;
   font-size: 1.2rem;
   cursor: pointer;
+  border: none;
+  text-decoration: none;   /* removes blue underline */
 }
 
-.maintaince-package{
-background-color:rgba(255, 255, 255, 0.9);
-justify-content:center;
-width: 55%;
-margin:auto;
-display: block;
-flex-direction:center;
-align-items:center;
-border-radius: 10px;
-}
-
-.maintaince-package h2{
-text-align: center;
-font-size:1.8rem;
-padding-top: 20px;
-
-}
-
-
-.mp{
-text-align: left;
-padding-left: 20px;
-padding-bottom: 35px;
+/* REMOVE BLUE UNDERLINE ON <a> WRAPPING BUTTON */
+a {
+  text-decoration: none;
 }
