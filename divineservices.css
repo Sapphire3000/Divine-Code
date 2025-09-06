@@ -112,3 +112,8 @@ text-align: left;
 padding-left: 20px;
 padding-bottom: 35px;
 }
+
+a {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* makes link text match button color */
+}
