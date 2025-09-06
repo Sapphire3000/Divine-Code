@@ -23,9 +23,8 @@ body {
   border-radius: 10px;
 }
 
-/* Container for title + description (Explorer & Maintenance) */
-.package-content,
-.maintaince-package {
+/* Container for title + description */
+.package-content {
   background-color: rgba(255, 255, 255, 0.9); /* white with a little transparency */
   color: black;
   border-radius: 10px;
@@ -33,30 +32,23 @@ body {
   max-width: 600px;
   margin: 20px auto; /* centers the box */
   text-align: left;
-  box-sizing: border-box; /* ensures padding doesn’t expand width */
 }
 
 /* Title inside container */
-.package-content h2,
-.maintaince-package h2 {
+.package-content h2 {
   margin-top: 0;
   text-align: center;
   font-size: 1.8rem;
-  color: #000000;
-  padding-top: 20px;
+  color: #000000; /* stays readable */
 }
 
 /* Description */
-.service-description,
-.mp {
+.service-description {
   font-size: 1rem;
   line-height: 1.5;
-  text-align: left;
-  padding-left: 20px;
-  padding-bottom: 35px;
 }
 
-/* Button styling */
+/* Button */
 button {
   background-color: green;
   color: white;
@@ -67,10 +59,31 @@ button {
   margin: 20px auto;
   font-size: 1.2rem;
   cursor: pointer;
-  text-decoration: none; /* removes underline */
+  text-decoration: none;
 }
 
-/* Optional: remove focus outline on click (just for style) */
-button:focus {
-  outline: none;
+.maintaince-package{
+background-color:rgba(255, 255, 255, 0.9);
+justify-content:center;
+width: 55%;
+margin:auto;
+display: block;
+flex-direction:center;
+align-items:center;
+border-radius: 10px;
 }
+
+.maintaince-package h2{
+text-align: center;
+font-size:1.8rem;
+padding-top: 20px;
+
+}
+
+
+.mp{
+text-align: left;
+padding-left: 20px;
+padding-bottom: 35px;
+}
+
