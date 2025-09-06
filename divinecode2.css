@@ -1,0 +1,80 @@
+/* ===== Logo Banner ===== */
+.image-container img {
+  width: 100%;             /* stretches across screen */
+  max-height: 400px;       /* adjust this for smaller/larger banner */
+  object-fit: cover;       /* keeps image proportioned nicely */
+  display: block;
+}
+
+
+
+/* ===== Reset Body ===== */
+body {
+  margin: 0;
+  padding: 0;
+  /* Background stripes angled */
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,          /* black stripe */
+    #000000 60px,
+    #FFFFFF 60px,     /* white stripe */
+    #FFFFFF 120px,
+    #D4AF37 120px,    /* gold accent stripe */
+    #D4AF37 130px );
+}
+
+
+.the-empress img {
+  width: 250px;              /* adjust portrait size */
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;       /* soft rounded corners */
+  border: 3px solid gold;    /* Empress elegance */
+  display: block;
+  margin: 0 auto 20px auto;  /* centers image and adds spacing */
+}
+
+.about-me {
+  background-color: #FFFFFF;        /* clean white background */
+  padding: 40px 20px;               /* spacing inside the div */
+  margin: 40px auto;                /* centers div and separates from other elements */
+  max-width: 800px;                 /* keeps it neat on larger screens */
+  border: 2px solid #D4AF37;        /* warm gold trim */
+  border-radius: 12px;               /* subtle rounded corners for elegance */
+  text-align: center;
+  color: #050C9C;                    /* deep blue text for contrast */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* soft shadow for separation */
+}
+
+
+nav {
+  width: 100%;
+  background-color: #FFFFFF;   /* light pink navbar */
+  padding: 20px 0;              /* increase to make it thicker */
+  box-sizing: border-box;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ===== Main Content ===== */
+.content {
+  padding: 50px 20px;
+  text-align: center;
+  color: #333;
+}
+
+

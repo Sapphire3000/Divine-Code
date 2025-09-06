@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* Background stripes angled */
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,          /* black stripe */
+    #000000 60px,
+    #FFFFFF 60px,     /* white stripe */
+    #FFFFFF 120px,
+    #D4AF37 120px,    /* gold accent stripe */
+    #D4AF37 130px
+  );
+  font-family: Arial, sans-serif;
+}
+
+/* Image */
+.wand-image {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Container for title + description */
+.package-content {
+  background-color: rgba(255, 255, 255, 0.9); /* white with a little transparency */
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto; /* centers the box */
+  text-align: left;
+}
+
+/* Title inside container */
+.package-content h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #000000; /* stays readable */
+}
+
+/* Description */
+.service-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Button */
+button {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  height: 60px;
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.maintaince-package{
+background-color:rgba(255, 255, 255, 0.9);
+justify-content:center;
+width: 55%;
+margin:auto;
+display: block;
+flex-direction:center;
+align-items:center;
+border-radius: 10px;
+}
+
+.maintaince-package h2{
+text-align: center;
+font-size:1.8rem;
+padding-top: 20px;
+
+}
+
+
+.mp{
+text-align: left;
+padding-left: 20px;
+padding-bottom: 35px;
+}

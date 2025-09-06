@@ -1,0 +1,118 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  /* Background stripes angled */
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,          /* black stripe */
+    #000000 60px,
+    #FFFFFF 60px,     /* white stripe */
+    #FFFFFF 120px,
+    #D4AF37 120px,    /* gold accent stripe */
+    #D4AF37 130px
+  );
+  font-family: Arial, sans-serif;
+}
+
+/* Centered Headings */
+h1 {
+  color: green;
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: "Rochester", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 100px;
+}
+
+.paragraph-container {
+  text-align: center;               /* centers the text */
+  margin-bottom: 30px;              /* space below the paragraph */
+  padding: 15px;                     /* padding around the text */
+  background-color: rgba(255, 255, 255, 0.7); /* slightly transparent for readability */
+  border-radius: 8px;               /* rounded corners */
+}
+/* Form Styles */
+form {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  border: 2px solid gold;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+
+  /* Center all contents inside */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center; /* Center the text of labels */
+}
+
+/* Slightly smaller input fields for name, email, and phone */
+input#first-name,
+input#last-name,
+input#email,
+input#phone {
+  width: 70%;          /* slightly smaller than full width */
+  max-width: 350px;    /* caps the width on large screens */
+  text-align: center;   /* centers the text inside the field */
+  padding: 10px;        /* keeps the existing padding */
+  margin: 5px 0;        /* small vertical spacing between fields */
+  box-sizing: border-box; /* ensures padding doesn't expand width */
+}
+
+/* Optional: keep textarea larger for messages */
+textarea#message {
+  width: 90%;           /* wider for longer messages */
+  max-width: 500px;
+  padding: 10px;
+  text-align: left;      /* keep message text left-aligned */
+  box-sizing: border-box;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between checkboxes */
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
