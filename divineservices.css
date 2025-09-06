@@ -1,7 +1,7 @@
-/* BODY */
 body {
   margin: 0;
   padding: 0;
+  /* Background stripes angled */
   background: repeating-linear-gradient(
     45deg,
     #000000,          /* black stripe */
@@ -14,7 +14,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* IMAGE */
+/* Image */
 .wand-image {
   height: 200px;
   width: 200px;
@@ -23,53 +23,40 @@ body {
   border-radius: 10px;
 }
 
-/* EXPLORER PACKAGE */
-.package-content {
-  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+/* Container for title + description (Explorer & Maintenance) */
+.package-content,
+.maintaince-package {
+  background-color: rgba(255, 255, 255, 0.9); /* white with a little transparency */
   color: black;
   border-radius: 10px;
   padding: 20px;
   max-width: 600px;
   margin: 20px auto; /* centers the box */
   text-align: left;
+  box-sizing: border-box; /* ensures padding doesn’t expand width */
 }
 
-.package-content h2 {
+/* Title inside container */
+.package-content h2,
+.maintaince-package h2 {
   margin-top: 0;
   text-align: center;
   font-size: 1.8rem;
   color: #000000;
-}
-
-.service-description {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* MAINTENANCE PACKAGE - MATCH EXPLORER PACKAGE */
-.maintaince-package {
-  background-color: rgba(255, 255, 255, 0.9); /* same as Explorer */
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 600px;       /* same width as Explorer */
-  margin: 20px auto;      /* centers the box */
-  text-align: left;
-}
-
-.maintaince-package h2 {
-  text-align: center;
-  font-size: 1.8rem;
   padding-top: 20px;
 }
 
+/* Description */
+.service-description,
 .mp {
   font-size: 1rem;
   line-height: 1.5;
+  text-align: left;
   padding-left: 20px;
   padding-bottom: 35px;
 }
 
-/* BUTTONS */
+/* Button styling */
 button {
   background-color: green;
   color: white;
@@ -80,10 +67,10 @@ button {
   margin: 20px auto;
   font-size: 1.2rem;
   cursor: pointer;
-  border: none;
   text-decoration: none; /* removes underline */
 }
 
-a {
-  text-decoration: none;  /* removes link underline on <a> */
+/* Optional: remove focus outline on click (just for style) */
+button:focus {
+  outline: none;
 }
