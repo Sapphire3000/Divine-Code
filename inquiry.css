@@ -11,12 +11,11 @@ body {
     #D4AF37 120px,    /* gold accent stripe */
     #D4AF37 130px
   );
-  font-family: Arial, sans-serif;
 }
 
 nav {
   width: 100%;
-  background-color: #FFFFFF;   /* light pink navbar */
+  background-color: white;   /* light pink navbar */
   padding: 20px 0;              /* increase to make it thicker */
   box-sizing: border-box;
 }
