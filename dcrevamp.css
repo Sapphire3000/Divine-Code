@@ -1,11 +1,10 @@
-/* ===== BODY ===== */
+/* ===== BODY & HERO ===== */
 body{
   margin:0;
   padding:0;
   background-color:#02250b;
 }
 
-/* ===== HERO BANNER / LOGO ===== */
 .hero-banner{
   display:flex;
   justify-content:center;
@@ -17,20 +16,20 @@ body{
 }
 
 .logo{
-  width: 650px;       /* desktop size */
   max-width: 80%;
+  max-height: 80%;
+  width:70%;
   height:auto;
   position:relative;
   z-index:1;
   filter: drop-shadow(0 0 5px #39ff14) drop-shadow(0 0 10px #39ff14) drop-shadow(0 0 20px #39ff14);
 }
 
-/* MOBILE LOGO */
+/* Slightly bigger logo on phones */
 @media screen and (max-width: 768px) {
   .logo {
-    width: 90%;       /* larger on phone */
-    max-width: 650px;
-    height: auto;
+    width: 85%;
+    max-width: 650px;  /* visually bigger on phones */
   }
 }
 
@@ -46,22 +45,28 @@ body{
 }
 
 .twinkle-container span{
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #F5E6B8;
-  border-radius: 0;
-  transform: rotate(45deg);
-  opacity: 0;
-  animation: twinkle 3s infinite ease-in-out;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #F5E6B8;
+    border-radius: 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: twinkle 3s infinite ease-in-out;
 }
 
 @keyframes twinkle {
-  0%, 100% { opacity: 0; transform: rotate(45deg) scale(0.5); }
-  50% { opacity: 1; transform: rotate(45deg) scale(1); }
+  0%, 100% { 
+    opacity: 0; 
+    transform: rotate(45deg) scale(0.5); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: rotate(45deg) scale(1); 
+  }
 }
 
-/* STAR POSITIONS */
+/* Star positions (21 stars) */
 .twinkle-container span:nth-child(1)  { top: 5%;  left: 10%;  animation-delay: 0s;   transform: scaleY(0.8) rotate(45deg); }
 .twinkle-container span:nth-child(2)  { top: 15%; left: 30%;  animation-delay: 0.5s; transform: scaleY(1)   rotate(45deg); }
 .twinkle-container span:nth-child(3)  { top: 25%; left: 50%;  animation-delay: 1s;   transform: scaleY(0.7) rotate(45deg); }
@@ -84,21 +89,29 @@ body{
 .twinkle-container span:nth-child(20) { top: 45%; left: 55%;  animation-delay: 5.3s; transform: scaleY(1.2) rotate(45deg); }
 .twinkle-container span:nth-child(21) { top: 60%; left: 75%;  animation-delay: 5.5s; transform: scaleY(1)   rotate(45deg); }
 
-/* ===== OUR MISSION ===== */
-.our-mission {
-  position: relative;           
-  background-color: #B5FCCD;     
-  text-align: center;
-  border-radius: 10px;
+/* ===== OUR MISSION CONTAINER ===== */
+.our-mission{
+  background-color:#B5FCCD;
   padding: 30px;
   margin: 50px auto;
   max-width: 700px;
-  line-height: 1.8;
+  border-radius:20px;
+  text-align:center;
+  position:relative;
+  overflow:visible;      /* beam shows outside */
+  color: #0f3d2f;   
+  font-size: 1.1rem;
+  line-height: 1.6;
   letter-spacing: 0.5px;
-  font-size:1.1rem;
-  color:#0f3d2f;
   z-index:1;
-  overflow: visible;  /* so glow shows outside */
+}
+
+/* Subtitle */
+.our-mission .sub-title{
+  color:#FF2DD1;
+  font-size:2rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 /* Beam border pseudo-element */
@@ -109,8 +122,8 @@ body{
   left: -3px;
   right: -3px;
   bottom: -3px;
-  border-radius: 13px;           
-  padding: 3px;                   
+  border-radius: 23px;
+  padding: 3px;
   background: linear-gradient(45deg, #FF2DD1, #F5E6B8, #FF2DD1, #F5E6B8);
   background-size: 300% 300%;
   z-index: 0;
@@ -122,18 +135,26 @@ body{
   animation: beamAnimation 6s linear infinite;
 }
 
-.our-mission .sub-title{
-  color:#FF2DD1;
-  font-size:2rem;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-/* ===== BEAM ANIMATION ===== */
 @keyframes beamAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* ===== RESPONSIVE OUR MISSION ===== */
+@media screen and (max-width: 768px) {
+  .our-mission {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .our-mission .sub-title {
+    font-size: 1.6rem;
+  }
+
+  .our-mission p {
+    font-size: 1rem;
+  }
 }
 
 /* ===== EXPEDITION PACKAGE ===== */
@@ -144,6 +165,13 @@ body{
   text-align: center;
   color: #F5E6B8;
   font-family: 'Oranienbaum', serif;
+}
+
+.package-desc {
+  margin: 20px auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
 }
 
 .hand {
@@ -166,7 +194,11 @@ body{
 
 .tier1,
 .tier2 {
-  background: linear-gradient(145deg, rgba(20, 60, 40, 0.85), rgba(10, 40, 25, 0.85));
+  background: linear-gradient(
+    145deg,
+    rgba(20, 60, 40, 0.85),
+    rgba(10, 40, 25, 0.85)
+  );
   padding: 30px;
   border-radius: 20px;
   width: 300px;
@@ -198,7 +230,6 @@ form {
   position: relative;
   overflow: visible;
   text-align: center;
-  color: #0f3d2f;
 }
 
 form::before {
@@ -221,7 +252,6 @@ form::before {
   animation: beamAnimation 6s linear infinite;
 }
 
-/* FORM ELEMENTS */
 form h1 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -292,17 +322,25 @@ form textarea {
     flex-direction: column;
     align-items: center;
   }
+
   .tier1, .tier2, .hand {
     width: 90%;
     max-width: 300px;
   }
+
   form {
     padding: 30px 20px;
     margin: 20px;
   }
+
   .submit-btn {
     width: 100%;
     font-size: 1.1rem;
     padding: 12px;
+  }
+
+  .time-selection {
+    flex-direction:row;
+    gap: 15px;
   }
 }
