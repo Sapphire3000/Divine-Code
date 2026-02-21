@@ -15,7 +15,7 @@ body{
 }
 
 .logo {
-  width: 400px;      /* desktop size */
+  width: 500px;      /* desktop size */
   height: auto;
   position: relative;
   z-index: 1;
