@@ -14,17 +14,17 @@ body{
   overflow:hidden;
 }
 
-.logo{
-  max-width: 80%;
-  max-height: 80%;
-  width:70%;
-  height:auto;
-  position:relative;
-  z-index:1;
-  filter: drop-shadow(0 0 5px #39ff14) drop-shadow(0 0 10px #39ff14) drop-shadow(0 0 20px #39ff14);
+.logo {
+  width: 400px;      /* desktop size */
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 5px #39ff14)
+          drop-shadow(0 0 10px #39ff14)
+          drop-shadow(0 0 20px #39ff14);
 }
 
-/* Mobile adjustment */
+  /* Mobile adjustment */
 @media screen and (max-width: 600px) {
   .logo {
     width: 90%;
