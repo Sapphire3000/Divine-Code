@@ -1,346 +1,117 @@
-/* ===== BODY & HERO ===== */
-body{
-  margin:0;
-  padding:0;
-  background-color:#02250b;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divine Code</title>
+  <link rel="stylesheet" href="dcrevamp.css">
+</head>
+<body>
 
-.hero-banner{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align: center;
-  height:100vh;
-  width:100vw;
-  overflow:hidden;
-}
+<div class="hero-banner">
+<img src="logo.png" alt="logo" class="logo">
+</div>
 
-.logo{
-  max-width: 80%;
-  max-height: 80%;
-  width:70%;
-  height:auto;
-  position:relative;
-  z-index:1;
-  filter: drop-shadow(0 0 5px #39ff14) drop-shadow(0 0 10px #39ff14) drop-shadow(0 0 20px #39ff14);
-}
+<div class="twinkle-container">
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+<span class="star"></span>
+</div>
 
-/* Slightly bigger logo on phones */
-@media screen and (max-width: 768px) {
-  .logo {
-    width: 85%;
-    max-width: 650px;  /* visually bigger on phones */
-  }
-}
+<div class="our-mission">
+<h2 class="sub-title">Our Mission</h2>
+<p class="text">
+   Divine Code was created for those building their platforms, sharing their vision and stepping into their digital presence with intention. Divine Code is here to help you manifest your dream website that doesn’t just function, but radiates! Each website carries its own energy, its own unique code, just like the person or brand it represents. You are unique, and so should your platform. With Divine Code, your online presence will align, attract and expand.
+</p>
+</div>
 
-/* ===== TWINKLES ===== */
-.twinkle-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 0;
-}
+<div class="package1">
+<h2 class="sub-title">Expedition Package</h2>
+<img src="IMG_1543.jpeg" alt="hand" class="hand">
 
-.twinkle-container span{
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: #F5E6B8;
-    border-radius: 0;
-    transform: rotate(45deg);
-    opacity: 0;
-    animation: twinkle 3s infinite ease-in-out;
-}
+<p class="text">
+ The Expedition Package is a great choice for those wanting to celebrate memorable milestones, creating their brand, portfolio etc. There are currently 2 tiers for this package.
+</p>
 
-@keyframes twinkle {
-  0%, 100% { 
-    opacity: 0; 
-    transform: rotate(45deg) scale(0.5); 
-  }
-  50% { 
-    opacity: 1; 
-    transform: rotate(45deg) scale(1); 
-  }
-}
+<div class="options">
 
-/* Star positions (21 stars) */
-.twinkle-container span:nth-child(1)  { top: 5%;  left: 10%;  animation-delay: 0s;   transform: scaleY(0.8) rotate(45deg); }
-.twinkle-container span:nth-child(2)  { top: 15%; left: 30%;  animation-delay: 0.5s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(3)  { top: 25%; left: 50%;  animation-delay: 1s;   transform: scaleY(0.7) rotate(45deg); }
-.twinkle-container span:nth-child(4)  { top: 35%; left: 20%;  animation-delay: 1.2s; transform: scaleY(1.1) rotate(45deg); }
-.twinkle-container span:nth-child(5)  { top: 45%; left: 70%;  animation-delay: 1.5s; transform: scaleY(0.9) rotate(45deg); }
-.twinkle-container span:nth-child(6)  { top: 55%; left: 40%;  animation-delay: 1.8s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(7)  { top: 65%; left: 60%;  animation-delay: 2s;   transform: scaleY(0.8) rotate(45deg); }
-.twinkle-container span:nth-child(8)  { top: 10%; left: 80%;  animation-delay: 2.3s; transform: scaleY(1.2) rotate(45deg); }
-.twinkle-container span:nth-child(9)  { top: 20%; left: 5%;   animation-delay: 2.5s; transform: scaleY(0.7) rotate(45deg); }
-.twinkle-container span:nth-child(10) { top: 30%; left: 90%;  animation-delay: 2.8s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(11) { top: 40%; left: 15%;  animation-delay: 3s;   transform: scaleY(0.9) rotate(45deg); }
-.twinkle-container span:nth-child(12) { top: 50%; left: 35%;  animation-delay: 3.2s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(13) { top: 60%; left: 55%;  animation-delay: 3.5s; transform: scaleY(0.8) rotate(45deg); }
-.twinkle-container span:nth-child(14) { top: 70%; left: 75%;  animation-delay: 3.8s; transform: scaleY(1.1) rotate(45deg); }
-.twinkle-container span:nth-child(15) { top: 80%; left: 25%;  animation-delay: 4s;   transform: scaleY(0.9) rotate(45deg); }
-.twinkle-container span:nth-child(16) { top: 85%; left: 45%;  animation-delay: 4.3s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(17) { top: 15%; left: 65%;  animation-delay: 4.5s; transform: scaleY(0.7) rotate(45deg); }
-.twinkle-container span:nth-child(18) { top: 25%; left: 85%;  animation-delay: 4.8s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(19) { top: 35%; left: 35%;  animation-delay: 5s;   transform: scaleY(0.8) rotate(45deg); }
-.twinkle-container span:nth-child(20) { top: 45%; left: 55%;  animation-delay: 5.3s; transform: scaleY(1.2) rotate(45deg); }
-.twinkle-container span:nth-child(21) { top: 60%; left: 75%;  animation-delay: 5.5s; transform: scaleY(1)   rotate(45deg); }
+  <div class="tier1">
+    <h3>Tier 1</h3>
+    <p>Price: $888</p>
+    <p>Duration: 3–4 weeks</p>
+    <p>Includes 1 custom design page, domain name, 1 month of free hosting, certificate of authenticity, and subtle animations.</p>
+  </div>
 
-/* ===== OUR MISSION CONTAINER ===== */
-.our-mission{
-  background-color:#B5FCCD;
-  padding: 30px;
-  margin: 50px auto;
-  max-width: 700px;
-  border-radius:20px;
-  text-align:center;
-  position:relative;
-  overflow:visible;      /* beam shows outside */
-  color: #0f3d2f;   
-  font-size: 1.1rem;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-  z-index:1;
-}
+  <div class="tier2">
+    <h3>Tier 2</h3>
+    <p>Price: $999</p>
+    <p>Duration: 3–4 weeks</p>
+    <p>Includes 2 custom design pages, domain name, 1 month of free hosting, certificate of authenticity, plus advanced animations.</p>
+  </div>
 
-/* Subtitle */
-.our-mission .sub-title{
-  color:#FF2DD1;
-  font-size:2rem;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
+</div>
+	
+	
+</div>
 
-/* Beam border pseudo-element */
-.our-mission::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 23px;
-  padding: 3px;
-  background: linear-gradient(45deg, #FF2DD1, #F5E6B8, #FF2DD1, #F5E6B8);
-  background-size: 300% 300%;
-  z-index: 0;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-  animation: beamAnimation 6s linear infinite;
-}
+<form action="https://formsubmit.co/divinecode.studio@gmail.com" method="POST">
+  <!-- Form Title -->
+  <h1>Ready To Manifest?</h1>
+  <div class="paragraph-container">
+    <p>Please fill out the inquiry form to receive a free consultation from Empress Cyrus</p>
+  </div>
 
-@keyframes beamAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+  <!-- Name Fields -->
+  <label for="first-name">First Name:</label>
+  <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
 
-/* ===== RESPONSIVE OUR MISSION ===== */
-@media screen and (max-width: 768px) {
-  .our-mission {
-    max-width: 90%;
-    padding: 20px;
-  }
+  <label for="last-name">Last Name:</label>
+  <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
 
-  .our-mission .sub-title {
-    font-size: 1.6rem;
-  }
+  <!-- Contact Info -->
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="name@example.com" required>
 
-  .our-mission p {
-    font-size: 1rem;
-  }
-}
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" placeholder="(000)-000-0000" required>
+  
+  <!-- 🔒 Honeypot Anti-Bot Field (DO NOT REMOVE) -->
+  <input type="text" name="_honey" style="display:none">
 
-/* ===== EXPEDITION PACKAGE ===== */
-.package1 {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  text-align: center;
-  color: #F5E6B8;
-  font-family: 'Oranienbaum', serif;
-}
+  <!-- Optional Settings -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Divine Code Inquiry">
 
-.package-desc {
-  margin: 20px auto 40px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 700px;
-}
 
-.hand {
-  max-width: 300px;
-  width: 25%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(245,230,184,0.5);
-}
+  <!-- Message -->
+  <label for="message">Your Message:</label>
+  <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
 
-.options {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
+  <!-- Submit Button -->
+  <button type="submit" class="submit-btn">Unveil</button>
+</form>
 
-.tier1,
-.tier2 {
-  background: linear-gradient(
-    145deg,
-    rgba(20, 60, 40, 0.85),
-    rgba(10, 40, 25, 0.85)
-  );
-  padding: 30px;
-  border-radius: 20px;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(245, 230, 184, 0.15);
-}
 
-.tier1 h3,
-.tier2 h3 {
-  margin-bottom: 15px;
-  color: #f5e6b8;
-  text-shadow: 0 0 8px rgba(245, 230, 184, 0.6);
-}
 
-.tier1 p, .tier2 p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 8px;
-}
-
-/* ===== FORM ===== */
-form {
-  background-color: #B5FCCD;
-  padding: 40px 30px;
-  max-width: 600px;
-  margin: 50px auto;
-  border-radius: 20px;
-  font-family: 'Oranienbaum', serif;
-  position: relative;
-  overflow: visible;
-  text-align: center;
-}
-
-form::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 23px;
-  padding: 3px;
-  background: linear-gradient(45deg, #FF2DD1, #F5E6B8, #FF2DD1, #F5E6B8);
-  background-size: 300% 300%;
-  z-index: -1;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-  animation: beamAnimation 6s linear infinite;
-}
-
-form h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #0f3d2f;
-  letter-spacing: 1px;
-}
-
-.paragraph-container {
-  text-align: center;
-  margin-bottom: 30px;
-  padding: 15px;
-  background-color: rgba(255,255,255,0.7);
-  border-radius: 8px;
-}
-
-.paragraph-container p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 12px 5px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  font-family: 'Oranienbaum', serif;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #02250b;
-}
-
-form textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.submit-btn {
-  background-color: #B5FCCD;
-  color: #0f3d2f;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 15px 30px;
-  border: 2px solid #F5E6B8;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
-  .options {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tier1, .tier2, .hand {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  form {
-    padding: 30px 20px;
-    margin: 20px;
-  }
-
-  .submit-btn {
-    width: 100%;
-    font-size: 1.1rem;
-    padding: 12px;
-  }
-
-  .time-selection {
-    flex-direction:row;
-    gap: 15px;
-  }
-}
+</body>
