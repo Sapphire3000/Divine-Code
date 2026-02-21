@@ -1,9 +1,12 @@
+/* ================== BASE ================== */
 body{
   margin:0;
   padding:0;
   background-color:#02250b;
+  font-family: 'Oranienbaum', serif;
 }
 
+/* ================== HERO / LOGO ================== */
 .hero-banner{
   display:flex;
   justify-content:center;
@@ -12,34 +15,20 @@ body{
   height:100vh;
   width:100vw;
   overflow:hidden;
-}
-
-.logo {
-  width: 600px;      /* desktop size */
-  height: auto;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 0 5px #39ff14)
-          drop-shadow(0 0 10px #39ff14)
-          drop-shadow(0 0 20px #39ff14);
 }
 
-  /* Mobile adjustment */
-@media screen and (max-width: 600px) {
-  .logo {
-    width: 90%;
-    max-width: 95%;
-  }
+.logo{
+  width: 600px;  /* bigger desktop size */
+  max-width: 90%;
+  height:auto;
+  position:relative;
+  z-index:1;
+  filter: drop-shadow(0 0 5px #39ff14) drop-shadow(0 0 10px #39ff14) drop-shadow(0 0 20px #39ff14);
 }
 
-/* Tablet adjustment */
-@media screen and (max-width: 900px) and (min-width: 601px) {
-  .logo {
-    width: 80%;
-    max-width: 90%;
-  }
-}
-
+/* ================== TWINKLES ================== */
 .twinkle-container {
   position: fixed;
   top: 0;
@@ -50,29 +39,23 @@ body{
   z-index: 0;
 }
 
-
 .twinkle-container span{
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: #F5E6B8; /* soft champagne gold */
-    border-radius: 0;
-    transform: rotate(45deg);
-    opacity: 0;
-    animation: twinkle 3s infinite ease-in-out;
-}
-@keyframes twinkle {
-  0%, 100% { 
-    opacity: 0; 
-    transform: rotate(45deg) scale(0.5); 
-  }
-  50% { 
-    opacity: 1; 
-    transform: rotate(45deg) scale(1); 
-  }
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #F5E6B8;
+  border-radius: 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  animation: twinkle 3s infinite ease-in-out;
 }
 
-/* Position, animation-delay, and scale variations for each star */
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: rotate(45deg) scale(0.5); }
+  50% { opacity: 1; transform: rotate(45deg) scale(1); }
+}
+
+/* Position and animation variations for 21 stars */
 .twinkle-container span:nth-child(1)  { top: 5%;  left: 10%;  animation-delay: 0s;   transform: scaleY(0.8) rotate(45deg); }
 .twinkle-container span:nth-child(2)  { top: 15%; left: 30%;  animation-delay: 0.5s; transform: scaleY(1)   rotate(45deg); }
 .twinkle-container span:nth-child(3)  { top: 25%; left: 50%;  animation-delay: 1s;   transform: scaleY(0.7) rotate(45deg); }
@@ -95,47 +78,31 @@ body{
 .twinkle-container span:nth-child(20) { top: 45%; left: 55%;  animation-delay: 5.3s; transform: scaleY(1.2) rotate(45deg); }
 .twinkle-container span:nth-child(21) { top: 60%; left: 75%;  animation-delay: 5.5s; transform: scaleY(1)   rotate(45deg); }
 
-
-
+/* ================== OUR MISSION ================== */
 .our-mission{
-background-color:#B5FCCD;
-padding: 50px 40px;
-margin: 50px auto;
-max-width:700px;
-border-radius:20px;
-text-align:center;
-position:relative;
-overflow:hidden;
-color: #0f3d2f;   
-font-size: 1.1rem;
-z-index:1;
+  background-color:#B5FCCD;
+  padding: 50px 40px;
+  margin: 50px auto;
+  max-width:700px;
+  border-radius:20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  color: #0f3d2f;   
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  z-index:1;
 }
 
 .our-mission .sub-title{
-color:#FF2DD1;
-font-size:2rem;
-margin-bottom: 20px;
-letter-spacing: 1px;
+  color:#FF2DD1;
+  font-size:2rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
-.our-mission{
-line-height: 1.8;
-letter-spacing: 0.5px;
-font-size:1.1rem;
-color:#0f3d2f;
-}
-
-.our-mission {
-  position: relative;            /* container reference for pseudo-element */
-  background-color: #B5FCCD;     
-  text-align: center;
-  border-radius: 10px;
-  padding: 30px;
-  z-index: 1;                     /* text on top */
-  overflow: visible;              /* so glow shows outside */
-}
-
-/* Beam border pseudo-element */
+/* Beam effect */
 .our-mission::before {
   content: '';
   position: absolute;
@@ -143,8 +110,8 @@ color:#0f3d2f;
   left: -3px;
   right: -3px;
   bottom: -3px;
-  border-radius: 13px;           /* slightly bigger than container */
-  padding: 3px;                   /* creates “hollow inside” effect */
+  border-radius: 13px;
+  padding: 3px;
   background: linear-gradient(45deg, #FF2DD1, #F5E6B8, #FF2DD1, #F5E6B8);
   background-size: 300% 300%;
   z-index: 0;
@@ -156,44 +123,21 @@ color:#0f3d2f;
   animation: beamAnimation 6s linear infinite;
 }
 
-
 @keyframes beamAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-
-/* Expedition Package Section */
+/* ================== PACKAGES ================== */
 .package1 {
-  max-width: 900px;      /* Keeps everything centered and not too wide */
+  max-width: 900px;
   margin: 50px auto;
   padding: 30px;
   text-align: center;
-  color: #F5E6B8;        /* gold text */
-  font-family: 'Oranienbaum', serif;
+  color: #F5E6B8;
 }
 
-/* Package Description */
-.package-desc {
-  margin: 20px auto 40px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 700px;
-}
-
-/* Hand Image */
-.hand {
-  max-width: 300px;       /* same width as Tier boxes */
-  width: 25%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(245,230,184,0.5); /* subtle magical glow */
-}
-
-/* Options Container */
 .options {
   display: flex;
   justify-content: center;
@@ -202,31 +146,16 @@ color:#0f3d2f;
   margin-top: 20px;
 }
 
-/* OPTIONS CONTAINER */
-.options {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap; /* responsive */
-  margin-top: 40px;
-}
-
-/* BOTH TIERS */
 .tier1,
 .tier2 {
-  background: linear-gradient(
-    145deg,
-    rgba(20, 60, 40, 0.85),
-    rgba(10, 40, 25, 0.85)
-  );
+  background: linear-gradient(145deg, rgba(20, 60, 40, 0.85), rgba(10, 40, 25, 0.85));
   padding: 30px;
   border-radius: 20px;
   width: 300px;
-  text-align: center;   /* FIXES OFF-CENTER TEXT */
+  text-align: center;
   box-shadow: 0 0 20px rgba(245, 230, 184, 0.15);
 }
 
-/* MATCH THE GLOW */
 .tier1 h3,
 .tier2 h3 {
   margin-bottom: 15px;
@@ -234,153 +163,60 @@ color:#0f3d2f;
   text-shadow: 0 0 8px rgba(245, 230, 184, 0.6);
 }
 
-/* Tier Paragraphs */
 .tier1 p, .tier2 p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 8px;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .options {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tier1, .tier2, .hand {
-    width: 90%;
-    max-width: 300px;
-  }
-}
-
-
-/* ===== FORM CONTAINER ===== */
-form {
-  background-color: #B5FCCD;      /* mint green */
-  padding: 40px 30px;
-  max-width: 600px;
-  margin: 50px auto;
-  border-radius: 20px;
-  font-family: 'Oranienbaum', serif;
-  position: relative;
-  overflow: visible;              /* beam shows outside */
-  text-align: center;             /* center everything inside */
-}
-
-/* Beam border pseudo-element */
-form::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 23px;
-  padding: 3px;
-  background: linear-gradient(45deg, #FF2DD1, #F5E6B8, #FF2DD1, #F5E6B8);
-  background-size: 300% 300%;
-  z-index: -1;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-  animation: beamAnimation 6s linear infinite;
-}
-
-@keyframes beamAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-/* FORM STYLING */
-form {
-  background-color: #B5FCCD;  /* mint green background */
-  color: #0f3d2f;
-  padding: 40px 30px;
-  max-width: 600px;
-  margin: 50px auto;
-  border-radius: 20px;
-  font-family: 'Oranienbaum', serif;
-  position: relative;
-  overflow: visible;           /* beam shows outside */
-  text-align: center;
-}
-
-/* Beam border pseudo-element */
-form::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 23px;
-  padding: 3px;
-  background: linear-gradient(45deg, #FF2DD1, #F5E6B8, #FF2DD1, #F5E6B8);
-  background-size: 300% 300%;
-  z-index: -1;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-  animation: beamAnimation 6s linear infinite;
-}
-
-/* Form Title and Paragraph */
-form h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #0f3d2f;
-  letter-spacing: 1px;
-}
-
-.paragraph-container {
-  text-align: center;
-  margin-bottom: 30px;
-  padding: 15px;
-  background-color: rgba(255,255,255,0.7);
-  border-radius: 8px;
-}
-
-.paragraph-container p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-/* Labels and Inputs */
-form label {
+.hand {
+  max-width: 300px;
+  width: 25%;
+  height: auto;
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 1rem;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(245,230,184,0.5);
+}
+
+/* ================== FORM ================== */
+form {
+  background-color: #B5FCCD;
+  padding: 40px 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 20px;
+  font-family: 'Oranienbaum', serif;
+  position: relative;
+  overflow: visible;
   text-align: center;
 }
 
-form input, form textarea {
-  width: 100%;
-  padding: 12px 5px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  font-family: 'Oranienbaum', serif;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #02250b;
+form::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 23px;
+  padding: 3px;
+  background: linear-gradient(45deg, #FF2DD1, #F5E6B8, #FF2DD1, #F5E6B8);
+  background-size: 300% 300%;
+  z-index: -1;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: beamAnimation 6s linear infinite;
 }
 
-form textarea {
-  min-height: 100px;
-  resize: vertical;
-}
+/* Form inputs */
+form label { display:block; margin-bottom:5px; font-weight:bold; font-size:1rem; text-align:center; }
+form input, form textarea { width:100%; padding:12px 5px; margin-bottom:20px; border-radius:10px; border:none; outline:none; font-size:1rem; background-color: rgba(255,255,255,0.9); color:#02250b; }
+form textarea { min-height:100px; resize:vertical; }
 
-
-/* Submit Button */
 .submit-btn {
   background-color: #B5FCCD;
   color: #0f3d2f;
@@ -393,27 +229,22 @@ form textarea {
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+.submit-btn:hover { transform: translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.5); }
 
-.submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+/* ================== RESPONSIVE ================== */
+@media screen and (max-width: 900px) {
+  .logo { width: 350px; max-width: 80%; }
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  form {
-    padding: 30px 20px;
-    margin: 20px;
+@media screen and (max-width: 600px) {
+  .logo { width: 320px; max-width: 95%; }
+  .our-mission {
+    max-width: 90%;
+    padding: 20px 15px;
+    font-size: 1rem;
   }
-
-  .submit-btn {
-    width: 100%;
-    font-size: 1.1rem;
-    padding: 12px;
-  }
-
-  .time-selection {
-    flex-direction:row;
-    gap: 15px;
-  }
+  .options { flex-direction: column; align-items: center; }
+  .tier1, .tier2, .hand { width: 90%; max-width: 300px; }
+  form { padding: 30px 20px; margin: 20px; }
+  .submit-btn { width: 100%; font-size: 1.1rem; padding: 12px; }
 }
