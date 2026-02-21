@@ -24,6 +24,22 @@ body{
   filter: drop-shadow(0 0 5px #39ff14) drop-shadow(0 0 10px #39ff14) drop-shadow(0 0 20px #39ff14);
 }
 
+/* Mobile adjustment */
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 90%;
+    max-width: 95%;
+  }
+}
+
+/* Tablet adjustment */
+@media screen and (max-width: 900px) and (min-width: 601px) {
+  .logo {
+    width: 80%;
+    max-width: 90%;
+  }
+}
+
 .twinkle-container {
   position: fixed;
   top: 0;
